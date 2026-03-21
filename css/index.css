@@ -1,0 +1,137 @@
+/* Main */
+main {
+  background: url(../assets/img/bus.jpeg) no-repeat center center/cover;
+  background-color: #ddd;
+  padding-bottom: 40px;
+}
+
+main > h1, main > h2 {
+  text-align: center;
+  color: #ccccccab;
+  font-weight: 100;
+}
+
+main > h2 {
+  color: #2bccb2;
+}
+
+main form  {
+  margin: 20px auto;
+  width: 50%;
+
+}
+
+main form input {
+  width: 100%;
+  padding: 12px;
+  padding-left: 50px;
+  outline: none;
+  border: none;
+  background: url(../assets/img/search-solid.svg) no-repeat 20px center/20px;
+  background-color: #fff;
+  border-radius: 3px;
+}
+
+
+.banner {
+  width: 30%;
+  height: 65vh;
+  margin: auto;
+  position: relative;
+  background: url(../assets/img/hand-holding.svg) no-repeat center
+    center/contain;
+  border: 5px dotted #ccccccab;
+  border-radius: 100%;
+}
+
+.banner a {
+  display: block;
+  width: 80px;
+  height: 100px;
+  position: absolute;
+  top: calc(25% + 10px);
+  left: 0;
+  right: 0;
+  margin: auto;
+  transition: all 0.5s ease;
+  animation: anm 2s 1s infinite;
+}
+
+.courses {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  width: 80%;
+  margin: auto;
+}
+
+.course {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+.course > div {
+  height: 100%;
+  padding: 10px;
+}
+
+.course a {
+  color: #fff;
+}
+
+.course .top {
+  background-color: var(--color1);
+  color: #fff;
+}
+
+.course .bottom {
+  padding: 20px;
+}
+
+.course .bottom a {
+  display: block;
+  background-color: var(--color1);
+  padding: 10px;
+  width: 70%;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.btn-more {
+  padding: 10px;
+  background-color: #fff;
+  color: var(--color1);
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-weight: bolder;
+  margin-left: 15%;
+  display: block;
+  margin-bottom: 70px;
+  margin-top: 20px;
+}
+
+@keyframes anm {
+  0% {
+    top: calc(30% + 20px);
+  }
+  50% {
+    top: 10%;
+  }
+  75% {
+    top: 30%;
+  }
+  100% {
+    top: calc(30% + 20px);
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .banner {
+    width: 80%;
+    height: 55vh;
+  }
+}

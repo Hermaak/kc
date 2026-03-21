@@ -36,7 +36,7 @@ for (const c of courses) {
         <div class="top">
           <!--<strong><i class='la la-graduation-cap'></i> Curso</strong>-->
           <h3>${c.label}</h3>
-          <a href="./details.html?c=${c.id}">Plano do curso <i class='la la-link'></i></a>
+          <a href="./details.html?c=${c.id}">Plano do curso</i></a>
         </div>
         <div class="bottom">
           <p>EM APENAS ${c.month} MESES</p>
@@ -61,7 +61,7 @@ document.querySelector("input").addEventListener("input", (e) => {
         <div class="top">
           <!--<strong><i class='la la-graduation-cap'></i> Curso</strong>-->
           <h3>${c.label}</h3>
-          <a href="./etails.html?c=${c.id}">Plano do curso <i class='la la-link'></i></a>
+          <a href="./etails.html?c=${c.id}">Plano do curso</i></a>
         </div>
         <div class="bottom">
           <p>EM APENAS ${c.month} MESES</p>

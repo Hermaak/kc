@@ -13,15 +13,11 @@ body {
   font-family: nunito;
   box-sizing: border-box;
   background-color: #fcfcfc;
-}
 
-ul {
-  padding: 0;
-}
-
-ul li {
-  list-style: none;
-  margin: 5px;
+  background: radial-gradient(circle, #0d1b4d 0%, #050a1f 100%);
+  background-attachment: fixed; /* Mantém o fundo fixo ao rolar */
+  min-height: 100vh;
+  margin: 0;
 }
 
 a {
@@ -177,14 +173,19 @@ main {
 /* Footer */
 footer {
   min-height: 200px;
-  /* background-color: #eee; */
   background-color: #0b0a0a;
-  /* background-color: #fff; */
+  background-color: #fff;
   display: flex;
   justify-content: space-around;
 }
 
-footer a {
+footer ul {
+  padding: 0;
+  margin: 0;
+}
+
+footer ul li {
+  list-style: none;
 }
 
 footer a:hover {
@@ -215,6 +216,10 @@ footer .f-right {
 
 footer .f-right > div {
   margin: 20px;
+}
+
+footer .rs {
+  margin-top: 10px;
 }
 
 .rs a {

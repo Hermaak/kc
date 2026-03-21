@@ -41,13 +41,6 @@ const courses = [
     price: 3497,
     show: true,
   },
-  {
-    id: 11,
-    label: "Jornalismo, Comunicação e Relações públicas",
-    month: 3,
-    price: 2997,
-    show: true,
-  },
   { id: 13, label: "Inglês técnico", month: 3, price: 2997, show: true },
   { id: 14, label: "Redes de computadores", month: 3, price: 2997, show: true },
   { id: 16, label: "Design", month: 3, price: 2997, show: true },

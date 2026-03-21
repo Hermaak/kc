@@ -1,11 +1,17 @@
 /* Main */
 main {
-  background: url(../assets/img/bus.jpeg) no-repeat center center/cover;
-  background-color: #ddd;
+  /* background: url(../assets/img/bus.jpeg) no-repeat center center/cover;
+  background-color: #ddd; */
   padding-bottom: 40px;
+
+  background: radial-gradient(circle, #0d1b4d 0%, #050a1f 100%);
+  background-attachment: fixed; /* Mantém o fundo fixo ao rolar */
+  min-height: 100vh;
+  margin: 0;
 }
 
-main > h1, main > h2 {
+main > h1,
+main > h2 {
   text-align: center;
   color: #ccccccab;
   font-weight: 100;
@@ -15,10 +21,9 @@ main > h2 {
   color: #2bccb2;
 }
 
-main form  {
+main form {
   margin: 20px auto;
   width: 50%;
-
 }
 
 main form input {
@@ -31,7 +36,6 @@ main form input {
   background-color: #fff;
   border-radius: 3px;
 }
-
 
 .banner {
   width: 30%;

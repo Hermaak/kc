@@ -42,7 +42,7 @@ for (const c of courses) {
         </div>
         <div class="bottom">
           <p>EM APENAS ${c.month} MESES</p>
-          <h2>${formatCurrency(c.price)}</h2>
+          <h2>${formatCurrency(c.price)} Mt</h2>
           <a href="./signup.html?c=${c.id}">Cadastrar-se</a>
         </div>
       </div>
@@ -67,7 +67,7 @@ document.querySelector("input").addEventListener("input", (e) => {
         </div>
         <div class="bottom">
           <p>EM APENAS ${c.month} MESES</p>
-          <h2>${formatCurrency(c.price)}</h2>
+          <h2>${formatCurrency(c.price)} Mt</h2>
           <a href="./signup.html?c=${c.id}">Cadastrar-se</a>
         </div>
       </div>

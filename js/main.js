@@ -29,11 +29,13 @@ async function awakeAPI() {
 
 let cs = "";
 
+const numColor = 255;
+
 for (const c of courses) {
   if (c.show)
     cs += `
      <div class="course">
-        <div class="top">
+        <div class="top" style="background: rgb(${random(numColor)}, ${random(numColor)}, ${random(numColor)})">
           <!--<strong><i class='la la-graduation-cap'></i> Curso</strong>-->
           <h3>${c.label}</h3>
           <a href="./details.html?c=${c.id}">Plano do curso</i></a>
@@ -58,7 +60,7 @@ document.querySelector("input").addEventListener("input", (e) => {
     ) {
       cs += `
       <div class="course">
-        <div class="top">
+        <div class="top" style="background: rgb(${random(numColor)}, ${random(numColor)}, ${random(numColor)})">
           <!--<strong><i class='la la-graduation-cap'></i> Curso</strong>-->
           <h3>${c.label}</h3>
           <a href="./etails.html?c=${c.id}">Plano do curso</i></a>

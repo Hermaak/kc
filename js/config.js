@@ -53,3 +53,7 @@ const courses = [
     show: true,
   },
 ];
+
+const random = (n) => {
+  return Math.round(Math.random() * n);
+};

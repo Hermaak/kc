@@ -12,9 +12,9 @@ body {
   margin: 0;
   font-family: nunito;
   box-sizing: border-box;
-  background-color: #fcfcfc;
+  background-color: #eee;
 
-  background: radial-gradient(circle, #0d1b4d 0%, #050a1f 100%);
+  /* background: radial-gradient(circle, #0d1b4d 0%, #050a1f 100%); */
   background-attachment: fixed; /* Mantém o fundo fixo ao rolar */
   min-height: 100vh;
   margin: 0;
@@ -207,6 +207,7 @@ footer .f-left {
   justify-content: center;
   align-items: center;
   color: var(--color1);
+  padding-top: 20px;
 }
 
 footer .f-right {

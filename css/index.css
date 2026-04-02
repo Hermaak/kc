@@ -4,7 +4,6 @@ main {
   background-color: #ddd; */
   padding-bottom: 40px;
 
-  background: radial-gradient(circle, #0d1b4d 0%, #050a1f 100%);
   background-attachment: fixed; /* Mantém o fundo fixo ao rolar */
   min-height: 100vh;
   margin: 0;
@@ -13,12 +12,10 @@ main {
 main > h1,
 main > h2 {
   text-align: center;
-  color: #ccccccab;
-  font-weight: 100;
 }
 
 main > h2 {
-  color: #2bccb2;
+  color: #25ba8b;
 }
 
 main form {
@@ -28,13 +25,14 @@ main form {
 
 main form input {
   width: 100%;
-  padding: 12px;
+  padding: 15px 25px;
   padding-left: 50px;
   outline: none;
   border: none;
   background: url(../assets/img/search-solid.svg) no-repeat 20px center/20px;
   background-color: #fff;
-  border-radius: 3px;
+  border: 1px solid #ccc;
+  border-radius: 7px;
 }
 
 .banner {
@@ -75,6 +73,8 @@ main form input {
   flex-direction: column;
   box-sizing: border-box;
   background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
 }
 
 .course > div {
@@ -87,8 +87,10 @@ main form input {
 }
 
 .course .top {
-  background-color: var(--color1);
+  /* background-color: var(--color1); */
   color: #fff;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .course .bottom {

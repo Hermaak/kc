@@ -17,22 +17,18 @@ form {
 }
 
 form h1 {
-  color: #ccccccab;
   font-weight: 100;
+  text-transform: uppercase;
 }
 
-label {
-  color: #ccccccab;
-}
 
 input, textarea, select {
   background: none;
   border-bottom: 1px solid #fff;
   padding: 15px;
   outline: none;
-  /* border: none; */
   margin: 5px 0 5px 0;
-  border: 1px dotted #ccc;
+  border: 1px dotted #666;
   color: #777;
   font-size: 14px;
   border-radius: 2px;

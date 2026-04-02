@@ -71,6 +71,10 @@ header {
 .logo img {
 }
 
+.simple-logo {
+  display: none;
+}
+
 header nav {
   display: block;
 }
@@ -233,6 +237,14 @@ footer .rs {
   }
 
   header nav {
+    display: none;
+  }
+
+  .simple-logo {
+    display: inline-block;
+  }
+
+  .logo {
     display: none;
   }
 

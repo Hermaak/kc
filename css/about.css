@@ -8,3 +8,9 @@ section {
 ul {
   list-style: none;
 }
+
+@media screen and (max-width: 420px) {
+  section {
+    width: 90%;
+  }
+}

@@ -233,6 +233,7 @@ footer .rs {
 }
 
 @media screen and (max-width: 420px) {
+
   .logo img {
     width: 140px;
   }

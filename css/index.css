@@ -140,4 +140,12 @@ main form input {
     width: 80%;
     height: 55vh;
   }
+
+  main form {
+    width: 80%;
+  }
+
+  .courses {
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  }
 }

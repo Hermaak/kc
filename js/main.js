@@ -13,12 +13,6 @@ hamburger.addEventListener("click", function () {
 
 awakeAPI();
 
-let css = "";
-for (const c of courses) {
-  css += c.label + ", ";
-}
-console.log(css);
-
 setInterval(async () => {
   awakeAPI();
 }, 30000);

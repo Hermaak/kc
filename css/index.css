@@ -171,6 +171,10 @@ ul li a {
     flex-wrap: wrap-reverse;
   }
 
+  .wrap-aside {
+    width: 100%;
+  }
+
   .banner {
     width: 80%;
     height: 55vh;

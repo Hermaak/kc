@@ -31,8 +31,13 @@ main form input {
   border: none;
   background: url(../assets/img/search-solid.svg) no-repeat 20px center/20px;
   background-color: #fff;
-  border: 1px solid #ccc;
+  border: 1px solid #fcfcfc;
   border-radius: 7px;
+  margin: 10px 0;
+}
+
+main form input:focus {
+  box-shadow: 0 0 1px 1px #ddd;
 }
 
 .banner {
@@ -59,12 +64,35 @@ main form input {
   animation: anm 2s 1s infinite;
 }
 
+.wrap-aside-courses {
+  display: flex;
+}
+
+.wrap-aside {
+}
+
+ul li {
+  list-style: none;
+}
+
+ul li a {
+  margin-bottom: 5px;
+}
+
+.wrap-courses {
+  width: 100%;
+  padding: 10px 30px;
+}
+
+.wrap-courses h1,
+.wrap-courses > h2 {
+  text-align: center;
+}
+
 .courses {
   display: grid;
-  grid-gap: 30px;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  width: 80%;
-  margin: auto;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
 }
 
 .course {
@@ -136,6 +164,10 @@ main form input {
 }
 
 @media screen and (max-width: 420px) {
+  .wrap-aside-courses {
+    flex-wrap: wrap-reverse;
+  }
+
   .banner {
     width: 80%;
     height: 55vh;

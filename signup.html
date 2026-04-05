@@ -21,7 +21,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.2.1/hamburgers.min.css"
     />
     <link rel="stylesheet" href="./css/main.css" />
-    <link rel="stylesheet" href="./css/signup.css">
+    <link rel="stylesheet" href="./css/signup.css" />
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
       integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
@@ -37,7 +37,9 @@
       <a href="./index.html" class="logo">
         <img src="./assets/img/logo-text.png" width="300" alt="logo" />
       </a>
-      <a href="./signup.html" class="btn-credit"><i class="la la-plus"></i>Cadastrar-se</a>
+      <a href="./signup.html" class="btn-credit"
+        ><i class="la la-plus"></i>Cadastrar-se</a
+      >
       <nav>
         <a href="./index.html">Home</a>
         <a href="./about.html">Sobre Nós</a>
@@ -68,24 +70,29 @@
       </div>
       <form>
         <h1>Formulário de cadastro</h1>
-         <label for="course">Curso:</label>
-        <select name="s-course" id="s-course">
-        </select>
-        <label for="nome">Nome:</label>
-        <input type="text" name="nome" id="nome" required autofocus />
-        <label for="nome">Apelido:</label>
-        <input type="text" name="apelido" id="apelido" required />
-        <label for="tel">Telefone:</label>
-        <input type="text" name="tel" required />
-        <label for="email">Email:</label>
-        <input type="text" name="email" />
-        <!-- <label for="desc">Detalhes (opcional):</label>
-        <textarea
-          name="desc"
-          id="desc"
-          placeholder=""
-          rows="7"
-        ></textarea> -->
+        <label for="course">Curso:</label>
+        <select name="s-course" id="s-course"></select>
+        <div class="form-group">
+          <input
+            type="text"
+            name="nome"
+            id="nome"
+            required
+            autofocus
+            placeholder="Nome"
+          />
+          <input
+            type="text"
+            name="apelido"
+            id="apelido"
+            required
+            placeholder="Apelido"
+          />
+        </div>
+        <div class="form-group">
+          <input type="text" name="tel" required placeholder="Telefone" />
+          <input type="text" name="email" placeholder="Email (opcional)" />
+        </div>
         <button type="submit" id="btn-submit">Enviar</button>
       </form>
       <a href="https://wa.me/+258872081978" id="btn-whatsapp"
@@ -131,20 +138,20 @@
     <script src="js/config.js"></script>
     <script src="js/main.js"></script>
     <script>
-      const url = new URL(window.location.href)
+      const url = new URL(window.location.href);
 
-      const course_ = url.searchParams.get('c');
+      const course_ = url.searchParams.get("c");
 
-      let csx = '';
+      let csx = "<option value=''>---Seleccione o curso---</option>";
 
       for (const c of courses) {
-        csx += `<option value='${c.id}'>${c.label}</option>`
+        csx += `<option value='${c.id}'>${c.label}</option>`;
       }
 
-      document.querySelector('#s-course').innerHTML = csx;
+      document.querySelector("#s-course").innerHTML = csx;
 
-       if(course_) {
-        document.querySelector('#s-course').value = course_;
+      if (course_) {
+        document.querySelector("#s-course").value = course_;
       }
 
       document.querySelector("form").addEventListener("submit", async (e) => {

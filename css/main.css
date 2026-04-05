@@ -20,6 +20,9 @@ body {
   margin: 0;
 }
 
+* {
+}
+
 a {
   text-decoration: none;
   color: var(--color1);
@@ -32,7 +35,7 @@ i {
 button {
   outline: none;
   border: none;
-  transition: all .2s ease-in;
+  transition: all 0.2s ease-in;
 }
 
 button:disabled {
@@ -41,13 +44,27 @@ button:disabled {
 }
 
 button:hover {
-  opacity: .8;
+  opacity: 0.8;
 }
 
 button:active {
-  opacity: .6;
+  opacity: 0.6;
 }
 
+video {
+  border-radius: 10px;
+}
+
+.form-group {
+  display: flex;
+}
+
+.form-group > * {
+  flex: 1;
+  width: calc(95%);
+  margin: 5px;
+  box-sizing: border-box;
+}
 /* Header */
 
 header {
@@ -90,6 +107,21 @@ header nav a:hover {
   border-bottom: 1px solid var(--color1);
 }
 
+.login {
+  background-color: #eee;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  display: none;
+}
+
+.login:hover {
+  border: none;
+}
+
 .btn-credit {
   background-color: var(--color1);
   color: #fff;
@@ -101,7 +133,7 @@ header nav a:hover {
 }
 
 .btn-credit:hover {
-  opacity: .97;
+  opacity: 0.97;
 }
 
 .btn-menu {
@@ -123,7 +155,8 @@ header nav a:hover {
   left: -80%;
   top: 0;
   bottom: 0;
-  background-color: #0b0a0a;
+  background-color: #fff;
+  border-right: 1px solid #ddd;
   z-index: 10;
   width: 80%;
   display: flex;
@@ -152,7 +185,7 @@ main {
 #btn-whatsapp {
   position: fixed;
   bottom: 30px;
-  right: 30px;
+  left: 30px;
   display: flex;
   justify-content: center;
   margin-right: 10px;
@@ -233,7 +266,6 @@ footer .rs {
 }
 
 @media screen and (max-width: 420px) {
-
   .logo img {
     width: 140px;
   }

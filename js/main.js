@@ -13,9 +13,17 @@ hamburger.addEventListener("click", function () {
 
 awakeAPI();
 
+let css = "";
+for (const c of courses) {
+  css += c.label + ", ";
+}
+console.log(css);
+
 setInterval(async () => {
   awakeAPI();
 }, 30000);
+
+const numColor = 255;
 
 async function awakeAPI() {
   try {
@@ -26,19 +34,19 @@ async function awakeAPI() {
   }
 }
 
+function getCourses() {
+  let cs = "";
 
-let cs = "";
-
-const numColor = 255;
-
-for (const c of courses) {
-  if (c.show)
-    cs += `
+  for (const c of courses) {
+    if (c.show) {
+      const _color = `rgb(${random(numColor)}, ${random(numColor)}, ${random(numColor)})`;
+      const color = c.colors ? c.colors[0] : _color;
+      cs += `
      <div class="course">
-        <div class="top" style="background: rgb(${random(numColor)}, ${random(numColor)}, ${random(numColor)})">
+        <div class="top" style="background: ${color}">
           <!--<strong><i class='la la-graduation-cap'></i> Curso</strong>-->
-          <h3>${c.label}</h3>
-          <a href="./details.html?c=${c.id}">Plano do curso</i></a>
+          <h3>${c.icon + " " + c.label}</h3>
+          <a href="./pages/plans/${c.plan || ""}">Plano do curso</i></a>
         </div>
         <div class="bottom">
           <p>EM APENAS ${c.month} MESES</p>
@@ -47,23 +55,29 @@ for (const c of courses) {
         </div>
       </div>
   `;
+    }
+  }
+
+  document.querySelector(".courses").innerHTML = cs;
 }
 
-document.querySelector(".courses").innerHTML = cs;
+getCourses();
 
 document.querySelector("input").addEventListener("input", (e) => {
   let cs = "";
   for (const c of courses) {
+    const _color = `rgb(${random(numColor)}, ${random(numColor)}, ${random(numColor)})`;
+    const color = c.colors ? c.colors[0] : _color;
     if (
       c.label.toLowerCase().includes(e.target.value.toLowerCase()) &&
       c.show
     ) {
       cs += `
       <div class="course">
-        <div class="top" style="background: rgb(${random(numColor)}, ${random(numColor)}, ${random(numColor)})">
+        <div class="top" style="background: ${color}">
           <!--<strong><i class='la la-graduation-cap'></i> Curso</strong>-->
-          <h3>${c.label}</h3>
-          <a href="./etails.html?c=${c.id}">Plano do curso</i></a>
+          <h3>${c.icon + " " + c.label}</h3>
+          <a href="./pages/plans/${c.plan || ""}">Plano do curso</i></a>
         </div>
         <div class="bottom">
           <p>EM APENAS ${c.month} MESES</p>

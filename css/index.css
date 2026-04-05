@@ -83,7 +83,8 @@ ul li a {
 }
 
 .wrap-courses {
-  width: 100%;
+  width: 80%;
+  margin: auto;
   padding: 10px 30px;
 }
 
